@@ -1,0 +1,3 @@
+payloadGen:
+convert to argparse
+add flag for little/big endian
