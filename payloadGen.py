@@ -17,8 +17,10 @@ parser.add_argument('-o', '--outfile', help="Output file")
 def convertPayload(payload):
     if (payload.startswith("0x")):
         payload = payload.strip("0x")
+        reversedPayload = unhexlify(payload)[::-1]
+    else:
+        reversedPayload = payload[::-1]
 
-    reversedPayload = unhexlify(payload)[::-1]
     return reversedPayload
 
 def main():
